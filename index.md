@@ -3,10 +3,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 <style type="text/css">
-*{
-	margin: 0;
-	padding: 0;
-}
+
 
 ul{
     border: 1px solid #ccc;
