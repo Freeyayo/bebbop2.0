@@ -1,37 +1,85 @@
-## Welcome to GitHub Pages
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
 
-You can use the [editor on GitHub](https://github.com/Freeyayo/bebbop2.0/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+ul{
+    border: 1px solid #ccc;
+    width: 1400px;
+    height: 300px;
+    margin-top: 100px;
+    background-color: grey;
+    position: relative;
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Freeyayo/bebbop2.0/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+}
+li{
+	border: 5px solid white;
+	box-shadow: 0 0 20px;
+	list-style: none;
+	width: 150px;
+	height: 200px;
+	float: left;
+	position: absolute;
+	transition-property: transform;
+    transition-duration: 1.5s;
+}
+ul li:nth-child(1){
+    top: 50px;
+    left: 35%;
+    transform: rotate(30deg);
+}
+ul li:nth-child(2){
+	 top: 50px;
+	 left: 45%;
+	 transform: rotate(-24deg);
+}
+ul li:nth-child(3){
+	 top: 50px;
+	 left: 55%;
+	 transform: rotate(15deg);
+}
+ul li:nth-child(4){
+	 top: 50px;
+	 left: 65%;
+	 transform: rotate(-30deg);
+}
+img{
+	width: 150px;
+	height: 200px;
+}
+ul li:nth-child(1):hover{
+	z-index: 1;
+	transform: rotate(0deg);
+	transform: scale(1.7);
+}
+ul li:nth-child(2):hover{
+	z-index: 1;
+	transform: rotate(0deg);
+	transform: scale(1.7);
+}
+ul li:nth-child(3):hover{
+	z-index: 1;
+	transform: rotate(0deg);
+	transform: scale(1.7);
+}
+ul li:nth-child(4):hover{
+	z-index: 1;
+	transform: rotate(0deg);
+	transform: scale(1.7);
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><img src="C:\Users\Public\Pictures\Sample Pictures\1.jpg" alt=""></li>
+	<li><img src="C:\Users\Public\Pictures\Sample Pictures\2.jpg" alt=""></li>
+	<li><img src="C:\Users\Public\Pictures\Sample Pictures\3.jpg" alt=""></li>
+	<li><img src="C:\Users\Public\Pictures\Sample Pictures\4.jpg" alt=""></li>
+</ul>
+</body>
+</html>
