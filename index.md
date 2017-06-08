@@ -10,7 +10,6 @@
 
 ul{
     border: 1px solid #ccc;
-    width: 1400px;
     height: 300px;
     margin-top: 100px;
     background-color: grey;
