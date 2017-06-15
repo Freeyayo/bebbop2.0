@@ -12,6 +12,81 @@ body{
 	background-color: #00E3E3;
 	overflow-x: hidden;
 }
+embed{
+	position: absolute;
+	top: 200px;
+	left: 70px;
+	width: 200px;
+}
+.mbin{
+	position: absolute;
+	width: 220px;
+	height: 80px;
+	top: 203px;
+	left: 60px;
+	background-color: black;
+	z-index: 1;
+    border-radius: 100px;
+}
+.m1{
+	position: absolute;
+	width: 15px;
+	top: 200px;
+	left: 150px;
+	transform: rotateZ(30deg);
+	animation-name: mone;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-delay: 3s;
+	animation-direction: alternate;
+}
+@keyframes mone{
+		from{
+}		
+        to{
+        	transform: translateX(10px) translateY(-50px) rotateZ(-70deg);
+	}
+}	
+
+.m2{
+	position: absolute;
+	width: 30px;
+	top: 210px;
+	left: 100px;
+	transform: rotateZ(-60deg);
+	animation-name: mtwo;
+	animation-duration: 18s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+	animation-direction: alternate;
+}
+@keyframes mtwo{
+		from{
+}		
+        to{
+        	transform: translateX(20px) translateY(-50px) rotateZ(160deg);
+	}
+}	
+.m3{
+	position: absolute;
+	width: 30px;
+	top: 210px;
+	left: 190px;
+	transform: rotateZ(-30deg);
+	animation-name: mtwo;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in;
+	animation-direction: alternate;
+}
+@keyframes mthree{
+		from{
+}		
+        to{
+        	transform: translateX(170px) translateY(-50px) rotateZ(60deg);
+	}
+}	
+		
 .box{
 	width: 1350px;	
 	height: 1200px;
@@ -236,6 +311,11 @@ img.c3{
 <body>
 <audio src="http://125.64.134.123/file3.data.weipan.cn/2096992/c52766ace77fb0e46407bbe2a982c584ca1718c4?ip=1497444782,139.200.20.120&ssig=ZSndNLsuTZ&Expires=1497445382&KID=sae,l30zoo1wmz&fn=I%27m%20Yours%20%28Album%20Version%29%20-%20Jason%20Mraz.mp3&skiprd=2&se_ip_debug=139.200.20.120&corp=2&from=1221134&wsiphost=local" autoplay="autoplay"></audio>
 <div class="box">
+<img src="http://s9.sinaimg.cn/orignal/002o6Zd6zy7bTyOa3qg38&690" alt="" class="m1">
+<img src="http://s1.sinaimg.cn/orignal/002o6Zd6zy7bTyOaf5u60&690" alt="" class="m2">
+<img src="http://s3.sinaimg.cn/orignal/002o6Zd6zy7bTyOag38d2&690" alt="" class="m3">
+<div class="mbin"><img src="http://s6.sinaimg.cn/orignal/002o6Zd6zy7bTyOarCl85&690" alt=""></div>
+<embed src="http://music.163.com/outchain/player?type=2&id=19497991&auto=1&height=66" type="">
 <div class="head">
 <img src="http://s6.sinaimg.cn/orignal/002o6Zd6zy7bQ6QDsBn45&690" alt="" class="c1">
 <img src="http://s16.sinaimg.cn/orignal/002o6Zd6zy7bQ6QDGbl2f&690" alt="" class="c2">
