@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Travel In Thailand</title>
 	<style type="text/css">
-body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input{ 
+body,div,ol,ul,li,dl,dt,dd,h1,h3,h4,h5,h6,form,fieldset,legend,input{ 
 	margin:0; 
 	padding:0;
 } 
@@ -12,6 +12,115 @@ body{
 	background-color: #00E3E3;
 	overflow-x: hidden;
 }
+.schedule{
+	position: absolute;
+	border: 3px solid #CDC9C9;
+	border-radius: 30px;
+	font-size: 30px;
+	background-color: #CDC9C9;
+	top: 330px;
+	left: 700px;
+	z-index: 2;
+}
+.rl{
+	position: absolute;
+	z-index: 2;
+	top: 500px;
+	left: 300px;
+    
+}
+.active{
+	background-color: #EE6AA7;
+	color: white;
+	border: 2px solid #000;
+	border-color: black;
+	border-radius: 20px;
+}
+#tab{
+	width: 700px;
+	height: 350px;
+	border: 5px solid #D1EEEE;
+	border-radius: 20px;
+	position: relative;
+	font-family: Chiller;
+	font-size: 20px;
+	background-color: #D1EEEE;
+	display: none;
+}
+.nk{
+	width: 650px;
+	height: 120px;
+	position: absolute;
+	top: 230px;
+	left: 22px;
+	background-color: #D1EEEE;
+	font-family: "微软雅黑";
+	border-radius: 25px;
+	border: 2px solid #D1EEEE;
+	font-size: 17px;
+}
+ul li{
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	border-color: white;
+	border-radius: 20px;
+	text-align: center;
+	list-style: none;
+	position: absolute;
+	background-color: #D1EEEE;
+}
+ul li:nth-child(1){
+	top: 0;
+	left: 0;
+
+}
+ul li:nth-child(2){
+	top: 0;
+	left: 150px;
+	
+}
+ul li:nth-child(3){
+	top: 0;
+	left: 300px;
+	
+}
+ul li:nth-child(4){
+	top: 0;
+	left: 450px;
+	
+}
+ul li:nth-child(5){
+	top: 0;
+	left: 596px;
+	
+}
+ul li:nth-child(6){
+	top: 120px;
+	left: 75px;
+	
+}
+ul li:nth-child(7){
+	top: 120px;
+	left: 225px;
+	
+}
+ul li:nth-child(8){
+	top: 120px;
+	left: 375px;
+	
+}
+ul li:nth-child(9){
+	top: 120px;
+	left: 525px;
+	
+}
+ul li:nth-child(10){
+	
+}
+p{
+	transform: translateY(-10px);
+}		
 embed{
 	position: absolute;
 	top: 200px;
@@ -311,10 +420,52 @@ img.c3{
 
 
 	</style>
+	<script type="text/javascript">
+window.onload=function()
+{   
+	var arr=['&nbsp&nbsp&nbsp&nbsp搭乘飞机从双流直飞曼谷，当地时间2：00PM抵达素那万普国际机场。下午路过贫民窟和central world，晚上暴走曼谷，吃了一堆东西。',
+	'&nbsp&nbsp&nbsp&nbsp于当地时间3:00pm左右从曼谷东站坐小汽车前往芭提雅。',
+	'&nbsp&nbsp&nbsp&nbsp在芭提雅玩了一天，晚上在露天酒吧点了首Wonderf Tonight。',
+	'&nbsp&nbsp&nbsp&nbsp坐船去Koh Larn岛骑摩托艇，游泳。',
+	'&nbsp&nbsp&nbsp&nbsp从芭提雅回曼谷，转机去清迈，但在周茜带领下错过飞机，只好坐通宵大巴去清迈（在大巴上度过了我的第25个生日，开心）。',
+	'&nbsp&nbsp&nbsp&nbsp逛清迈，误入素食餐厅，做massage，晚上逛周末夜市',
+	'&nbsp&nbsp&nbsp&nbsp丛林飞跃--跳大树、滑铁索、走绳索桥',
+	'&nbsp&nbsp&nbsp&nbsp白天找周茜，晚上去了一家很体面的泰餐厅，最后去了露天酒馆。',
+	'&nbsp&nbsp&nbsp&nbsp坐飞机去曼谷转机回国，草帽忘在了清迈。']
+	var oDiv=document.getElementById('tab');
+	var aLi=document.getElementsByTagName('li');
+	var oTxt=oDiv.getElementsByTagName('div')[0];	
+	var oJm=document.getElementById('jiemian');
+	var oBtn=oJm.getElementsByTagName('input');
+	oBtn[0].onclick=function() {
+	if (oDiv.style.display=='block') 
+	{oDiv.style.display='none'} 
+else 
+	{oDiv.style.display='block'}	
+	}
+	for (var i = 0; i < aLi.length; i++) 
+	{   
+		aLi[i].index=i;
+		aLi[i].onmouseover=function() 
+		{   
+			for (var i = 0; i < aLi.length; i++) 
+			{
+			    aLi[i].className='';	
+			}
+		   this.className='active';	
+		   oTxt.innerHTML='<h2>第'+(this.index+1)+'天</h2><p>'+arr[this.index]+'</p>';
+		};
+
+	};
+
+};
+
+	</script>
 </head>
 <body>
 <audio src="http://125.64.134.123/file3.data.weipan.cn/2096992/c52766ace77fb0e46407bbe2a982c584ca1718c4?ip=1497444782,139.200.20.120&ssig=ZSndNLsuTZ&Expires=1497445382&KID=sae,l30zoo1wmz&fn=I%27m%20Yours%20%28Album%20Version%29%20-%20Jason%20Mraz.mp3&skiprd=2&se_ip_debug=139.200.20.120&corp=2&from=1221134&wsiphost=local" autoplay="autoplay"></audio>
-<div class="box">
+<div id="jiemian" class="box">
+<input class="schedule" type="button" value="schedule">
 <img src="http://s9.sinaimg.cn/orignal/002o6Zd6zy7bTyOa3qg38&690" alt="" class="m1">
 <img src="http://s1.sinaimg.cn/orignal/002o6Zd6zy7bTyOaf5u60&690" alt="" class="m2">
 <img src="http://s3.sinaimg.cn/orignal/002o6Zd6zy7bTyOag38d2&690" alt="" class="m3">
@@ -340,6 +491,23 @@ img.c3{
 <div class="nav2"></div>
 <div class="nav3"></div>
 <div class="nav4"></div>
+<div class="rl">
+<div id="tab">
+<ul>
+	<li><h2>May</h2><p>2nd TUE</p></li>
+	<li><h2>May</h2><p>3rd WEN</p></li>
+	<li><h2>May</h2><p>4th THR</p></li>
+	<li><h2>May</h2><p>5th FRI</p></li>
+	<li><h2>May</h2><p>6th SAT</p></li>
+	<li><h2>May</h2><p>7th SUN</p></li>
+	<li><h2>May</h2><p>8th MON</p></li>
+	<li><h2>May</h2><p>9th TUE</p></li>
+	<li><h2>May</h2><p>10th WEN</p></li>
+</ul>
+<div class="nk">
+</div>
+</div>
+</div>
 </div>	
 </body>
 </html>
