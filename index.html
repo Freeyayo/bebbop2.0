@@ -8,6 +8,22 @@ body,div,ol,ul,li,dl,dt,dd,h1,h3,h4,h5,h6,form,fieldset,legend,input{
 	margin:0; 
 	padding:0;
 } 
+.shijian{
+	width: 450px;
+	height: 100px;
+	background-color: #00E3E3;
+	line-height: 20px;
+	transform: scale(0.5);
+	position: absolute;
+	z-index: 2;
+	top: 200px;
+	left: 950px;
+}
+.shijian>span{
+   font-size: 50px; 
+   color: white;
+   font-weight: bolder; 
+}		
 .schedule{
 	position: absolute;
 	border: 3px solid #CDC9C9;
@@ -424,8 +440,30 @@ img.c3{
 
 	</style>
 		<script type="text/javascript">
+function toDou(n) 
+	{
+		if(n<10)
+		{
+			return '0'+n;
+		}
+		else
+		{
+			return ''+n;
+		}
+	}			
 window.onload=function()
-{   
+{       
+	var oDivshijian=document.getElementById('shijian');
+	var aImg=oDivshijian.getElementsByTagName('img');
+	setInterval(function()
+	{
+		var oDate=new Date();
+	var str=toDou(oDate.getMonth()+1)+toDou(oDate.getDate())+toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+for(var i=0;i<aImg.length;i++)
+	{
+		aImg[i].src='https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/'+str[i]+'.jpg';
+	}
+	},0);
 	var arr=['&nbsp&nbsp&nbsp&nbsp搭乘飞机从双流直飞曼谷，当地时间2：00PM抵达素那万普国际机场。下午路过贫民窟和central world，晚上暴走曼谷，吃了一堆东西。',
 	'&nbsp&nbsp&nbsp&nbsp于当地时间3:00pm左右从曼谷东站坐小汽车前往芭提雅。',
 	'&nbsp&nbsp&nbsp&nbsp在芭提雅玩了一天，晚上在露天酒吧点了首Wonderf Tonight。',
@@ -466,13 +504,12 @@ else
 	</script>
 </head>
 <body>
-<div id="jiemian" class="box">
+<div id="jiemian" class="box">	
 <input class="schedule" type="button" value="schedule">
 <img src="http://s9.sinaimg.cn/orignal/002o6Zd6zy7bTyOa3qg38&690" alt="" class="m1">
 <img src="http://s1.sinaimg.cn/orignal/002o6Zd6zy7bTyOaf5u60&690" alt="" class="m2">
 <img src="http://s3.sinaimg.cn/orignal/002o6Zd6zy7bTyOag38d2&690" alt="" class="m3">
 <div class="mbin"><img src="http://s6.sinaimg.cn/orignal/002o6Zd6zy7bTyOarCl85&690" alt=""></div>
-<embed src="http://music.163.com/outchain/player?type=2&id=34880265&auto=1&height=66" type="">
 <div class="head">
 <img src="http://s6.sinaimg.cn/orignal/002o6Zd6zy7bQ6QDsBn45&690" alt="" class="c1">
 <img src="http://s16.sinaimg.cn/orignal/002o6Zd6zy7bQ6QDGbl2f&690" alt="" class="c2">
@@ -510,6 +547,29 @@ else
 </div>
 </div>
 </div>
+<div id="shijian" class="shijian">
+&nbsp
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+&nbsp
+<span>-</span>
+&nbsp
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+<br>&nbsp&nbsp&nbsp&nbsp
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+&nbsp
+<span>:</span>
+&nbsp
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+&nbsp
+<span>:</span>
+&nbsp
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+<img src="https://raw.githubusercontent.com/Freeyayo/bebbop2.0/master/0.jpg" alt="">
+</div>		
 </div>		
 </body>
 </html>
