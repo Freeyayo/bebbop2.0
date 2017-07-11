@@ -7,6 +7,17 @@
 body,div,ol,ul,li,dl,dt,dd,h1,h3,h4,h5,h6,form,fieldset,legend,input{ 
 	margin:0; 
 	padding:0;
+}		
+.shijian{
+	width: 450px;
+	height: 100px;
+	background-color: #00E3E3;
+	line-height: 20px;
+	transform: scale(0.5);
+	position: absolute;
+	z-index: 2;
+	top: 200px;
+	left: 950px;
 }
 .shijian>span{
    font-size: 50px; 
@@ -441,7 +452,7 @@ function toDou(n)
 		}
 	}			
 window.onload=function()
-{     
+{       
 	var oDivshijian=document.getElementById('shijian');
 	var aImg=oDivshijian.getElementsByTagName('img');
 	setInterval(function()
